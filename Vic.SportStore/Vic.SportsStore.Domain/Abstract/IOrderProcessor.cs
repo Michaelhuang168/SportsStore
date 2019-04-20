@@ -7,15 +7,8 @@ using Vic.SportsStore.Domain.Entities;
 
 namespace Vic.SportsStore.Domain.Abstract
 {
-    public interface IProductsRepository
+    public interface IOrderProcessor
     {
-
-        IEnumerable<Product> Products { get; }
-
-        void SaveProduct(Product product);
-
-        Product DeleteProduct(int productID);
-
+        void ProcessOrder(Cart cart, ShippingDetails shippingDetails);
     }
-
 }

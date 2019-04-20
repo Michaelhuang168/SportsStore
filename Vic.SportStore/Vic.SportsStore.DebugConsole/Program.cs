@@ -17,9 +17,9 @@ namespace Vic.SportsStore.DebugConsole
                 ctx.Products.RemoveRange(ctx.Products);
                 ctx.SaveChanges();
 
-                for(int i=0; i<20; i++)
+                for(int i=0; i<80; i++)
                 {
-                    var product = new Product() {Name=$"product{i}" };
+                    var product = new Product() { Name = $"product{i}", Category = "aa" };
                     ctx.Products.Add(product);
                     ctx.SaveChanges();
                 }

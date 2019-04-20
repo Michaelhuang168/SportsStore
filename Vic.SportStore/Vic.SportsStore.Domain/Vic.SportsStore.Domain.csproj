@@ -76,15 +76,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IOrderProcessor.cs" />
     <Compile Include="Abstract\IProductsRepository.cs" />
     <Compile Include="Concrete\EFDbContext.cs" />
     <Compile Include="Concrete\EFProductRepository.cs" />
+    <Compile Include="Concrete\EmailOrderProcessor.cs" />
+    <Compile Include="Entities\Cart.cs" />
     <Compile Include="Entities\Product.cs" />
+    <Compile Include="Entities\ShippingDetails.cs" />
+    <Compile Include="Migrations\201904061949258_InitialCreate.cs" />
+    <Compile Include="Migrations\201904061949258_InitialCreate.Designer.cs">
+      <DependentUpon>201904061949258_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904202036067_UpdateProduct.cs" />
+    <Compile Include="Migrations\201904202036067_UpdateProduct.Designer.cs">
+      <DependentUpon>201904202036067_UpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201904061949258_InitialCreate.resx">
+      <DependentUpon>201904061949258_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904202036067_UpdateProduct.resx">
+      <DependentUpon>201904202036067_UpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

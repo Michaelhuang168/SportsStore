@@ -18,11 +18,39 @@ namespace Vic.SportsStore.WebApp
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterControllers(AppDomain.CurrentDomain.GetAssemblies()).PropertiesAutowired();
 
             builder
+
+                .RegisterControllers(AppDomain.CurrentDomain.GetAssemblies())
+
+                .PropertiesAutowired();
+                        
+            builder
+
+               .RegisterType<EFDbContext>()
+
+               .PropertiesAutowired();
+                       
+            builder
+
                 .RegisterType<EFProductRepository>()
-                .As<IProductRepository>()
+
+                .As<IProductsRepository>()
+
+                .PropertiesAutowired();
+                       
+            builder
+
+                .RegisterType<EmailOrderProcessor>()
+
+                .As<IOrderProcessor>()
+
+                .PropertiesAutowired();
+                       
+            builder
+
+                .RegisterType<EmailSettings>()
+
                 .PropertiesAutowired();
 
             var container = builder.Build();
