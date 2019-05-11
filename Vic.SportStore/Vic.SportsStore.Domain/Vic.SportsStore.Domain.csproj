@@ -82,6 +82,7 @@
     <Compile Include="Concrete\EFProductRepository.cs" />
     <Compile Include="Concrete\EmailOrderProcessor.cs" />
     <Compile Include="Entities\Cart.cs" />
+    <Compile Include="Entities\LoginUser.cs" />
     <Compile Include="Entities\Product.cs" />
     <Compile Include="Entities\ShippingDetails.cs" />
     <Compile Include="Migrations\201904061949258_InitialCreate.cs" />
@@ -91,6 +92,14 @@
     <Compile Include="Migrations\201904202036067_UpdateProduct.cs" />
     <Compile Include="Migrations\201904202036067_UpdateProduct.Designer.cs">
       <DependentUpon>201904202036067_UpdateProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904271932269_AddLoginUser.cs" />
+    <Compile Include="Migrations\201904271932269_AddLoginUser.Designer.cs">
+      <DependentUpon>201904271932269_AddLoginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904272013053_ModifyProduct.cs" />
+    <Compile Include="Migrations\201904272013053_ModifyProduct.Designer.cs">
+      <DependentUpon>201904272013053_ModifyProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -105,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904202036067_UpdateProduct.resx">
       <DependentUpon>201904202036067_UpdateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904271932269_AddLoginUser.resx">
+      <DependentUpon>201904271932269_AddLoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904272013053_ModifyProduct.resx">
+      <DependentUpon>201904272013053_ModifyProduct.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

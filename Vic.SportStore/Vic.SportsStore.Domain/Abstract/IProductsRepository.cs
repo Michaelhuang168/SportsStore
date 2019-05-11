@@ -15,7 +15,7 @@ namespace Vic.SportsStore.Domain.Abstract
         void SaveProduct(Product product);
 
         Product DeleteProduct(int productID);
-
+        
     }
 
 }

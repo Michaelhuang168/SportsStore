@@ -33,7 +33,6 @@ namespace Vic.SportsStore.Domain.Concrete
             {
                 context.Products.Add(product);
             }
-
             else
             {
                 Product dbEntry = context.Products.Find(product.ProductId);
@@ -43,6 +42,8 @@ namespace Vic.SportsStore.Domain.Concrete
                     dbEntry.Description = product.Description;
                     dbEntry.Price = product.Price;
                     dbEntry.Category = product.Category;
+                    dbEntry.ImageData = product.ImageData;
+                    dbEntry.ImageMimeType = product.ImageMimeType;
                 }
             }
             context.SaveChanges();

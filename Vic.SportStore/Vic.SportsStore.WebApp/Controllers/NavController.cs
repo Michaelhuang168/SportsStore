@@ -26,6 +26,9 @@ namespace Vic.SportsStore.WebApp.Controllers
             .Distinct()
             .OrderBy(x => x);
             return PartialView("FlexMenu", categories);
+
+
+
         }
     }
 }
